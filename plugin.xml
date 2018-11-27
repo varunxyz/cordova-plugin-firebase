@@ -79,7 +79,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		    <string>development</string>
 		</config-file>
 		<config-file parent="aps-environment" target="*/Entitlements-Release.plist">
-			<string>production</string>
+		  <string>production</string>
 		</config-file>
 
 		<resource-file src="src/ios/GoogleService-Info.plist" />
@@ -88,6 +88,9 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		<source-file src="src/ios/AppDelegate+FirebasePlugin.m" />
 		<header-file src="src/ios/FirebasePlugin.h" />
 		<source-file src="src/ios/FirebasePlugin.m" />
+                <header-file src="src/ios/NSData+Serialize.h" />
+		<source-file src="src/ios/NSData+Serialize.m" />
+
 
 		<header-file src="src/ios/Firebase/Firebase.h" />
 

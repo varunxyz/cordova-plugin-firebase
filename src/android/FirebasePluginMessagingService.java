@@ -89,6 +89,13 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
             if (TextUtils.isEmpty(text)) {
                 text = data.get("body");
             }
+
+            // Twilio message
+            if (data.containsKey("twi_message_type") && data.get("twi_message_type").contentEquals("twilio.channel.new_message")) {
+                title = data.get("author");
+                text = data.get("twi_body");
+                sound = data.get("twi_sound");
+            }
         }
 
         if (TextUtils.isEmpty(id)) {

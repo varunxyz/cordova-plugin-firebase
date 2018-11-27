@@ -60,9 +60,13 @@
         [FIRApp configureWithOptions:options];
     }
     
+    [application registerForRemoteNotifications];
+
     // no .plist found, try default App
     if (![FIRApp defaultApp] && !filePath) {
         NSLog(@"GoogleService-Info.plist NOT FOUND, setup: [FIRApp defaultApp]");
+
+    if (![FIRApp defaultApp]) {
         [FIRApp configure];
     }
 

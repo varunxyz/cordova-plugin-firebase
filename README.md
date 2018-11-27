@@ -3,6 +3,9 @@
 # cordova-plugin-firebase
 This plugin brings push notifications, analytics, event tracking, crash reporting and more from Google Firebase to your Cordova project!  Android and iOS supported.
 
+## In this fork
+- Twilio push notification integration
+
 ## Supported Cordova Versions
 - cordova: `>= 6`
 - cordova-android: `>= 6.4`

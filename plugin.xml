@@ -88,9 +88,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 		<source-file src="src/ios/AppDelegate+FirebasePlugin.m" />
 		<header-file src="src/ios/FirebasePlugin.h" />
 		<source-file src="src/ios/FirebasePlugin.m" />
-                <header-file src="src/ios/NSData+Serialize.h" />
-		<source-file src="src/ios/NSData+Serialize.m" />
-
 
 		<header-file src="src/ios/Firebase/Firebase.h" />
 

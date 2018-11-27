@@ -71,8 +71,16 @@ static FirebasePlugin *firebasePlugin;
     NSData *rawToken;
 
     rawToken = [FIRMessaging messaging].APNSToken;
+
+    const char *data = [rawToken bytes];
+    NSMutableString *token = [NSMutableString string];
+
+    for (NSUInteger i = 0; i < [rawToken length]; i++) {
+        [token appendFormat:@"%02.2hhX", data[i]];
+    }
+
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                                     messageAsString:[rawToken serializeToHexString]];
+                                     messageAsString:[token copy]];
 
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
